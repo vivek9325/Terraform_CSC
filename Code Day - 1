@@ -48,4 +48,59 @@ terraform validate
 terraform plan
 terraform apply
 
+==============================================================================================
+
+Multiple Provider
+
+
+vk-version.tf
+
+terraform {
+  required_version = ">=2.0"
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "4.13.0"
+    }
+  }
+}
+
+provider "azurerm" {
+  # Configuration options
+  features {
+    
+  }
+}
+
+provider "azurerm" {
+
+    features {
+      
+    }
+
+    alias = "provider2-westus"
+  
+}
+
+
+vk-resoursegroup.tf
+
+resource "azurerm_resource_group" "vkrg1" {
+
+    name = "vkrg1"
+    location = "East US"
+  
+}
+
+resource "azurerm_resource_group" "vkrg2" {
+
+    name = "vkrg2"
+    location = "West US"
+    provider = azurerm.provider2-westus
+  
+}
+
+==========================================================================
+
+
 
