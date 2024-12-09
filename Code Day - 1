@@ -1,0 +1,12 @@
+terraform -version
+D:
+cd CSC_Terraform_Lab
+cd day_1
+cls
+dir
+terraform -version
+az --version
+cls
+az login
+az account link
+az account list
