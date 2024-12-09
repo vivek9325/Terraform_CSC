@@ -56,7 +56,7 @@ Multiple Provider
 vk-version.tf
 
 terraform {
-  required_version = ">=2.0"
+  required_version = ">=0.15"
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
