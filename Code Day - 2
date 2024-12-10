@@ -183,4 +183,67 @@ resource "azurerm_network_interface" "vknic" {
   
 }
 
+==================================================================================================
+
+Meta Argument --- for_each
+
+vk-version.tf
+
+terraform {
+  required_version = ">=0.15"
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "4.13.0"
+    }
+    /*random = {
+      source = "hashicorp/random"
+      version = "3.6.3"
+    }*/
+  }
+}
+
+provider "azurerm" {
+  # Configuration options
+
+  features {
+    
+  }
+subscription_id = "bfd8881a-6cc5-4a55-81d7-73350c1acc1f"
+
+}
+
+/*resource "random_string" "vkrandom" {
+
+  length = 16
+  upper = false
+  special = false
+  numeric = false
+  
+}*/
+
+
+vk-resourcegroup.tf
+
+resource "azurerm_resource_group" "vk-rg" {
+
+    for_each = {
+
+        rg1 = "eastus"
+        rg2 = "westus"
+        rg3 = "eastus2"
+    }
+
+    name = "${each.key}-vk"
+    location = each.value
+
+
+
+    #name = "vk-rg1"
+    #location = "East US"
+  
+}
+
+===========================================================================
+
 
