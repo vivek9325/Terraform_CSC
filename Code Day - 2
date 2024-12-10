@@ -312,3 +312,16 @@ resource "azurerm_network_interface" "vknic" {
   
 }
 
+==============================================================================================
+
+Count Meta Argument ----
+
+vk-resourcegroup.tf
+
+resource "azurerm_resource_group" "vk-rg" {
+
+    count = 3
+    name = "vk-rg1-${count.index}"
+    location = "East US"
+  
+}
