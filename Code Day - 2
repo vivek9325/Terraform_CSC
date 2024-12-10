@@ -367,3 +367,8 @@ resource "azurerm_resource_group" "vk-rg" {
   
 }
 
+==========================================================================================
+
+Overriding input variables ----
+
+terrform plan -var="business_unit=IT"
