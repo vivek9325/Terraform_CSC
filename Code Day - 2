@@ -367,8 +367,16 @@ resource "azurerm_resource_group" "vk-rg" {
   
 }
 
+============================================================================
 ==========================================================================================
 
 Overriding input variables ----
 
 terrform plan -var="business_unit=IT"
+
+Override using .tfvars file -----
+
+terraform.tfvars
+
+business_unit = "IT"
+environment = "Prod"
