@@ -248,6 +248,8 @@ resource "azurerm_resource_group" "vk-rg" {
 
 Meta Argument - foreach toset function
 
+vk-resourcegroup.tf
+
 resource "azurerm_resource_group" "myrg" {
   for_each = toset([ "eastus", "eastus2", "westus" ])
   name = "myrg-${each.value}"
