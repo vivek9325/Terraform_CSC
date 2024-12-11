@@ -129,7 +129,7 @@ provider "azurerm" {
 
   }
 
-  subscription_id = "bfd8881a-6cc5-4a55-81d7-73350c1acc1f"
+  subscription_id = "#####"
 }
 
 
