@@ -27,8 +27,8 @@ variable "resource_group_location" {
   type        = string
   default     = "eastus"
   validation {
-    #condition = var.resource_group_location == "eastus" || var.resource_group_location == "eastus2"
-    condition = can(regex("india$", var.resource_group_location))
+    condition = var.resource_group_location == "eastus" || var.resource_group_location == "eastus2"
+    #condition = can(regex("india$", var.resource_group_location))
     error_message = "We only allow Resources to be in westindia and south india location"
   }
 }
