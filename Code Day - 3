@@ -81,3 +81,15 @@ mssql-password = "admin@12345678"
 mssql-storage-mb = 1024
 mssql-auto-grow-enable = true
 
+vk-azure-db.tf
+
+resource "azurerm_mssql_server" "mssql_server" {
+  name = var.mssql-server-name
+  resource_group_name = var.resource_group_name
+  location = var.resource_group_location
+  version = "12.0"
+  administrator_login = var.mssql-username
+  administrator_login_password = var.mssql-password
+  #ssl_enforcement_enabled = false
+  
+}
