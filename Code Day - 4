@@ -60,4 +60,51 @@ output "storage_account_name" {
 
 
 
+===============================================================================================
+
+
+Azure CICD Pipeline ----
+
+azure-pipelines-results.yml
+
+trigger:
+  paths:
+    include:
+      - result/*
+
+resources:
+- repo: self
+
+
+pool:
+name: '#######'
+
+
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:
+  - job: Build
+    displayName: Build
+    steps:
+    - task: Docker@2
+      inputs:
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(imageRepository)'
+        command: 'build'
+        Dockerfile: 'result/Dockerfile'
+        tags: '$(tag)'
+
+- stage: Push
+  displayName: Push stage
+  jobs:
+  - job: Push
+    displayName: Push
+    steps:
+    - task: Docker@2
+      inputs:
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(imageRepository)'
+        command: 'push'
+        tags: '$(tag)'
 
