@@ -4,7 +4,7 @@ r1_static-website.tf
 
 
 module "azure_static_website" {
-    source = "azure_static_website"
+    source = "./azure_static_website"
     location = "eastus"
     resource_group_name = "myvkrg1"
 
