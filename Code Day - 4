@@ -108,3 +108,22 @@ stages:
         command: 'push'
         tags: '$(tag)'
 
+============================================================================================
+
+Agent Pool Linux server configuraton -----
+
+20  mkdir agent
+   21  cd agent/
+   22  wget https://vstsagentpackage.azureedge.net/agent/4.248.0/vsts-agent-linux-x64-4.248.0.tar.gz
+   23  ll
+   24  tar xvzf vsts-agent-linux-x64-4.248.0.tar.gz
+   25  clear
+   26  ll
+   27  ./config.sh
+   28  ./run.sh
+   29  cd
+   30  sudo apt update && sudo apt upgrade -y
+   34  sudo apt install docker.io
+   35  sudo usermod -aG docker azureuser
+   36  sudo systemctl restart docker
+   37  logout
