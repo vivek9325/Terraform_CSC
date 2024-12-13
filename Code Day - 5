@@ -20,3 +20,8 @@ terraform state show azurerm_resource_group.resource_group
 terraform taint azurerm_resource_group.resource_group
 terraform untaint azurerm_resource_group.resource_group
 
+==============================================================================
+
+terraform import ------------
+
+terraform import azurerm_resource_group.vkrg2 /subscriptions/bfd8881a-6cc5-4a55-81d7-73350c1acc1f/resourceGroups/vkrg2
