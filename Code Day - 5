@@ -25,3 +25,7 @@ terraform untaint azurerm_resource_group.resource_group
 terraform import ------------
 
 terraform import azurerm_resource_group.vkrg2 /subscriptions/bfd8881a-6cc5-4a55-81d7-73350c1acc1f/resourceGroups/vkrg2
+
+
+terraform import azurerm_resource_group.example /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP_NAME>
+
