@@ -1,0 +1,11 @@
+Remote Backend and Storage Locking -----
+
+
+  backend "azurerm" {
+
+    resource_group_name = "vk-rg"
+    storage_account_name = "terraformstate1312"
+    container_name = "tfstatefiles"
+    key = "terraform.tfstate"
+    
+  }
