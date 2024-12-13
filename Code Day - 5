@@ -9,3 +9,11 @@ Remote Backend and Storage Locking -----
     key = "terraform.tfstate"
     
   }
+
+==========================================================================
+
+terraform state commands ------
+
+terraform state list
+terraform state show azurerm_resource_group.resource_group
+
