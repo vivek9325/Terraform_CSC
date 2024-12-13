@@ -17,3 +17,6 @@ terraform state commands ------
 terraform state list
 terraform state show azurerm_resource_group.resource_group
 
+terraform taint azurerm_resource_group.resource_group
+terraform untaint azurerm_resource_group.resource_group
+
