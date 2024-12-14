@@ -1,0 +1,8 @@
+location = "eastus"
+resource_group_name = "az-vk-rg"
+storage_account_name = "azurestatwebvk"
+storage_account_tier = "Standard"
+storage_account_replication = "LRS"
+storage_account_kind = "StorageV2"
+static_web_index_document = "index.html"
+static_web_error_document = "error.html"

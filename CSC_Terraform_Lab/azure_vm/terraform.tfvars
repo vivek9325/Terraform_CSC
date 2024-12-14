@@ -1,0 +1,10 @@
+location = "eastus"
+ip_address = "mypublicip-1"
+resource_group_name = "vk_resource_group"
+vk_subnet_name = "vk_subnet"
+vk_vnic = "vk_vnic"
+vnet_name = "vk_vnet"
+common_tags = "dev"
+vnet_address_space_prod = ["10.1.0.0/16","10.2.0.0/16"]
+vnet_address_space_dev = [ "10.0.0.0/16" ]
+allocation_type = "Static"
